@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="bank" id="BYZ-38-t0r" customClass="ViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piggy Bank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWl-fI-cU5">
+                                <rect key="frame" x="15" y="20" width="343" height="70"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DAo-h3-GqH">
+                                <rect key="frame" x="16" y="98" width="343" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="Xqo-iO-hoq" customClass="CustomCell" customModule="PiggyBank" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xqo-iO-hoq" id="b8B-aE-LYt">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIw-qq-ALs">
+                                                    <rect key="frame" x="234" y="11" width="94" height="50"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="PIP-HR-zfg"/>
+                                                        <constraint firstAttribute="height" constant="50" id="dIV-k0-LOF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="T8l-jo-n8M">
+                                                    <rect key="frame" x="235" y="69" width="94" height="29"/>
+                                                    <connections>
+                                                        <action selector="valueChanged:" destination="Xqo-iO-hoq" eventType="valueChanged" id="TnD-sM-B7n"/>
+                                                    </connections>
+                                                </stepper>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-eB-fW0">
+                                                    <rect key="frame" x="15" y="11" width="150" height="50"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Gkd-Sx-Yq3"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Coin">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tIw-qq-ALs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b8B-aE-LYt" secondAttribute="leadingMargin" id="5XX-uh-L3o"/>
+                                                <constraint firstAttribute="trailing" secondItem="T8l-jo-n8M" secondAttribute="trailing" constant="14" id="6wm-Zh-MUM"/>
+                                                <constraint firstItem="tIw-qq-ALs" firstAttribute="top" secondItem="b8B-aE-LYt" secondAttribute="topMargin" id="9zB-uB-4MB"/>
+                                                <constraint firstItem="e6y-eB-fW0" firstAttribute="leading" secondItem="b8B-aE-LYt" secondAttribute="leadingMargin" id="E2A-7b-OJK"/>
+                                                <constraint firstItem="e6y-eB-fW0" firstAttribute="top" secondItem="b8B-aE-LYt" secondAttribute="topMargin" id="ORZ-vb-95u"/>
+                                                <constraint firstAttribute="bottom" secondItem="T8l-jo-n8M" secondAttribute="bottom" constant="21.5" id="Xpl-ws-4ws"/>
+                                                <constraint firstItem="tIw-qq-ALs" firstAttribute="trailing" secondItem="b8B-aE-LYt" secondAttribute="trailingMargin" id="aJb-za-1ve"/>
+                                                <constraint firstItem="e6y-eB-fW0" firstAttribute="bottom" secondItem="b8B-aE-LYt" secondAttribute="bottomMargin" constant="-48" id="cuW-hm-Hgl"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e6y-eB-fW0" secondAttribute="trailingMargin" id="jmY-Iu-PxB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Amount" destination="tIw-qq-ALs" id="5XA-jl-UfD"/>
+                                            <outlet property="Coin" destination="e6y-eB-fW0" id="bQT-iJ-77f"/>
+                                            <outlet property="Stepper" destination="T8l-jo-n8M" id="dQG-ht-Qmg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="glF-CS-vaa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8eQ-Op-jNx"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: $0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8O-8a-CGv">
+                                <rect key="frame" x="207" y="585" width="152" height="62"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DAo-h3-GqH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="4.5" id="2lU-bL-4VL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f8O-8a-CGv" secondAttribute="bottom" constant="20" id="Aef-Yn-X7A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWl-fI-cU5" secondAttribute="trailing" constant="17" id="Lj5-Hk-OmT"/>
+                            <constraint firstItem="DAo-h3-GqH" firstAttribute="top" secondItem="IWl-fI-cU5" secondAttribute="bottom" constant="8" id="UhR-ow-su2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWl-fI-cU5" secondAttribute="bottom" constant="577" id="c7t-8R-uRc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAo-h3-GqH" secondAttribute="trailing" constant="16" id="cGo-Qz-4Ad"/>
+                            <constraint firstItem="DAo-h3-GqH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gpp-iU-WQ2"/>
+                            <constraint firstItem="f8O-8a-CGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="207" id="hu3-ye-ncb"/>
+                            <constraint firstItem="IWl-fI-cU5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="kKu-iW-g3g"/>
+                            <constraint firstItem="f8O-8a-CGv" firstAttribute="top" secondItem="DAo-h3-GqH" secondAttribute="bottom" constant="7" id="qOd-mg-wuH"/>
+                            <constraint firstItem="IWl-fI-cU5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ucS-cW-zsI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8O-8a-CGv" secondAttribute="trailing" constant="16" id="xtO-Em-6wR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="PiggyBank" destination="IWl-fI-cU5" id="HuC-nw-LLl"/>
+                        <outlet property="Table" destination="DAo-h3-GqH" id="6GZ-aT-YxX"/>
+                        <outlet property="TotalMoney" destination="f8O-8a-CGv" id="UEg-mV-w1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
