@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +39,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIw-qq-ALs">
-                                                    <rect key="frame" x="234" y="11" width="94" height="50"/>
+                                                    <rect key="frame" x="234" y="31" width="94" height="50"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
                                                     </accessibility>
@@ -52,14 +51,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="T8l-jo-n8M">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="999" translatesAutoresizingMaskIntoConstraints="NO" id="T8l-jo-n8M">
                                                     <rect key="frame" x="235" y="69" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="Xqo-iO-hoq" eventType="valueChanged" id="TnD-sM-B7n"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-eB-fW0">
-                                                    <rect key="frame" x="15" y="11" width="150" height="50"/>
+                                                    <rect key="frame" x="15" y="31" width="150" height="30"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                     </accessibility>
@@ -102,7 +101,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: $0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8O-8a-CGv">
-                                <rect key="frame" x="207" y="585" width="152" height="62"/>
+                                <rect key="frame" x="207" y="585" width="159" height="62"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
                                 </accessibility>
@@ -110,26 +109,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1B-qO-NAg">
+                                <rect key="frame" x="16" y="585" width="120" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWn-tE-szG">
+                                <rect key="frame" x="144" y="598" width="55" height="36"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DAo-h3-GqH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="4.5" id="2lU-bL-4VL"/>
+                            <constraint firstItem="m1B-qO-NAg" firstAttribute="top" secondItem="DAo-h3-GqH" secondAttribute="bottom" constant="7" id="3do-Jf-AC9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f8O-8a-CGv" secondAttribute="bottom" constant="20" id="Aef-Yn-X7A"/>
+                            <constraint firstItem="f8O-8a-CGv" firstAttribute="leading" secondItem="JWn-tE-szG" secondAttribute="trailing" constant="8" id="GwT-3i-fv9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWl-fI-cU5" secondAttribute="trailing" constant="17" id="Lj5-Hk-OmT"/>
+                            <constraint firstItem="m1B-qO-NAg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ov4-yg-l43"/>
                             <constraint firstItem="DAo-h3-GqH" firstAttribute="top" secondItem="IWl-fI-cU5" secondAttribute="bottom" constant="8" id="UhR-ow-su2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m1B-qO-NAg" secondAttribute="bottom" constant="20" id="X03-H8-aBT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWl-fI-cU5" secondAttribute="bottom" constant="577" id="c7t-8R-uRc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAo-h3-GqH" secondAttribute="trailing" constant="16" id="cGo-Qz-4Ad"/>
+                            <constraint firstItem="f8O-8a-CGv" firstAttribute="leading" secondItem="m1B-qO-NAg" secondAttribute="trailing" constant="71" id="eMX-og-mhy"/>
                             <constraint firstItem="DAo-h3-GqH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gpp-iU-WQ2"/>
                             <constraint firstItem="f8O-8a-CGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="207" id="hu3-ye-ncb"/>
                             <constraint firstItem="IWl-fI-cU5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="kKu-iW-g3g"/>
+                            <constraint firstItem="JWn-tE-szG" firstAttribute="leading" secondItem="m1B-qO-NAg" secondAttribute="trailing" constant="8" id="o6F-D2-yu2"/>
                             <constraint firstItem="f8O-8a-CGv" firstAttribute="top" secondItem="DAo-h3-GqH" secondAttribute="bottom" constant="7" id="qOd-mg-wuH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JWn-tE-szG" secondAttribute="bottom" constant="33" id="qjU-41-y75"/>
+                            <constraint firstItem="JWn-tE-szG" firstAttribute="top" secondItem="DAo-h3-GqH" secondAttribute="bottom" constant="20" id="uZL-Vv-fHC"/>
                             <constraint firstItem="IWl-fI-cU5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ucS-cW-zsI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8O-8a-CGv" secondAttribute="trailing" constant="16" id="xtO-Em-6wR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8O-8a-CGv" secondAttribute="trailing" constant="9" id="xtO-Em-6wR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="PiggyBank" destination="IWl-fI-cU5" id="HuC-nw-LLl"/>
+                        <outlet property="SnobbyCommentary" destination="m1B-qO-NAg" id="aN0-r6-Qb6"/>
+                        <outlet property="SnobbyImage" destination="JWn-tE-szG" id="4TL-ye-ifX"/>
                         <outlet property="Table" destination="DAo-h3-GqH" id="6GZ-aT-YxX"/>
                         <outlet property="TotalMoney" destination="f8O-8a-CGv" id="UEg-mV-w1D"/>
                     </connections>

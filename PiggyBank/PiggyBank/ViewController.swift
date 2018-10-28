@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var PiggyBank: UILabel!
     @IBOutlet weak var Table: UITableView!
     @IBOutlet weak var TotalMoney: UILabel!
+    @IBOutlet weak var SnobbyCommentary: UILabel!
+    @IBOutlet weak var SnobbyImage: UIImageView!
     
     let money:[String] = ["Pennies", "Nickles", "Dimes", "Quarters"]
     
@@ -19,6 +21,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         NotificationCenter.default.addObserver(self, selector: #selector(displayTotal(notification: )), name: NSNotification.Name(rawValue: "step"), object: nil)
+        
+        SnobbyCommentary.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +42,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @objc func displayTotal(notification: NSNotification) {
-        TotalMoney.text = "Total: $" + String(format: "%.2f", calculateTotal())
+        let money = calculateTotal()
+        TotalMoney.text = "Total: $" + String(format: "%.2f", money)
+        if money < 100 {
+            SnobbyCommentary.text = "Poor peasant."
+        }
+        else {
+            SnobbyCommentary.text = "Snobby Dragon approves."
+        }
     }
     
     func calculateTotal() -> Double {
